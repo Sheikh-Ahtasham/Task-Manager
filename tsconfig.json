@@ -20,6 +20,29 @@
 //   "exclude": ["node_modules"],
 //   "references": [{ "path": "./tsconfig.node.json" }]
 // }
+// {
+//   "compilerOptions": {
+//     "target": "ESNext",
+//     "useDefineForClassFields": true,
+//     "lib": ["DOM", "DOM.Iterable", "ESNext"],
+//     "allowJs": false,
+//     "skipLibCheck": true,
+//     "esModuleInterop": true,
+//     "allowSyntheticDefaultImports": true,
+//     "strict": true,
+//     "module": "ESNext",
+//     "moduleResolution": "bundler",
+//     "resolveJsonModule": true,
+//     "isolatedModules": false,
+//     "noEmit": false,
+//     "jsx": "react-jsx",
+//     "types": ["vitest/globals"]
+//   },
+//   "include": ["src/**/*.ts", "src/**/*.tsx", "vite.config.ts"],
+//   "exclude": ["node_modules"],
+//   "references": [{ "path": "./tsconfig.node.json" }]
+// }
+
 {
   "compilerOptions": {
     "target": "ESNext",
@@ -27,18 +50,17 @@
     "lib": ["DOM", "DOM.Iterable", "ESNext"],
     "allowJs": false,
     "skipLibCheck": true,
-    "esModuleInterop": true,
+    "esModuleInterop": false,
     "allowSyntheticDefaultImports": true,
     "strict": true,
     "module": "ESNext",
     "moduleResolution": "bundler",
     "resolveJsonModule": true,
-    "isolatedModules": false,
-    "noEmit": false,
-    "jsx": "react-jsx",
-    "types": ["vitest/globals"]
+    "isolatedModules": true,
+    "noEmit": true,
+    "jsx": "react-jsx"
+    // "types": ["testing-library__jest-dom"]
   },
-  "include": ["src/**/*.ts", "src/**/*.tsx", "vite.config.ts"],
-  "exclude": ["node_modules"],
+  "include": ["src"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }

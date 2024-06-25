@@ -52,7 +52,7 @@ export const getComments = async (projectId: number, taskId?: number) => {
 export const addComment = async (
   projectId: number,
   taskId: number,
-  parent_id: number,
+  parent_id: number | null,
   content: string,
 ) => {
   try {

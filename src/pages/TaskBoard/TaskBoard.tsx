@@ -49,7 +49,7 @@ const TaskBoard: React.FC = () => {
   const [tasks, setTasks] = useState<Task[]>([])
   const [columns, setColumns] = useState<{ [key: string]: Task[] }>({
     todo: [],
-    inProgress: [],
+    "in-progress": [],
     testing: [],
     hold: [],
     completed: [],
@@ -66,7 +66,9 @@ const TaskBoard: React.FC = () => {
       setTasks(data)
       setColumns({
         todo: data.filter((task: Task) => task.status === "todo"),
-        inProgress: data.filter((task: Task) => task.status === "in-progress"),
+        "in-progress": data.filter(
+          (task: Task) => task.status === "in-progress",
+        ),
         testing: data.filter((task: Task) => task.status === "testing"),
         hold: data.filter((task: Task) => task.status === "hold"),
         completed: data.filter((task: Task) => task.status === "completed"),
@@ -116,7 +118,7 @@ const TaskBoard: React.FC = () => {
     try {
       await updateTask(Number(projectId), draggedTask.id, {
         name: draggedTask.name,
-        descriptions: draggedTask.description,
+        description: draggedTask.description,
         due_date: draggedTask.due_date,
         status: destination.droppableId,
       })

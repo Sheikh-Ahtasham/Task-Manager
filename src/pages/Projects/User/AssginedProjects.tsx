@@ -54,7 +54,7 @@ const AssignedProjects: React.FC = () => {
       title: "Status",
       dataIndex: "is_active",
       key: "is_active",
-      render: (isActive: boolean) =>
+      render: (isActive: number) =>
         isActive ? (
           <Tag color="success">Active</Tag>
         ) : (

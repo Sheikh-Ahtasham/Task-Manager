@@ -20,10 +20,17 @@ export const getTaskById = async (projectId: number, taskId: number) => {
   }
 }
 
+type Task = {
+  name: string
+  description: string
+  due_date: string
+  status: string
+}
+
 export const updateTask = async (
   projectId: number,
   taskId: number,
-  task: any,
+  task: Task,
 ) => {
   try {
     const response = await Api.put(
